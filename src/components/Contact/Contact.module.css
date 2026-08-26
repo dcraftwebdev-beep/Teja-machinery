@@ -22,7 +22,7 @@
 .grid {
   position: relative; z-index: 1;
   max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start;
+  display: grid; grid-template-columns: 1fr; gap: 50px; align-items: start;
 }
 
 /* left column */
@@ -36,7 +36,7 @@
 .lead { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.5; color: #55524c; margin: 26px 0 34px; max-width: 42ch; }
 .brochureBtn { display: inline-block; }
 
-.infoRow { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 90px; }
+.infoRow { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
 .infoLabel { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: var(--clr-accent); margin-bottom: 20px; }
 .infoItem { font-size: 17px; line-height: 1.45; color: #141414; margin-bottom: 14px; }
 .infoItem a { color: inherit; text-decoration: none; }

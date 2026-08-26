@@ -29,6 +29,14 @@ const positions = [
 ];
 
 export default function Careers() {
+  const scrollToOpenings = () => {
+    const el = document.getElementById('openings');
+    if (!el) return;
+    // use Lenis for smooth in-page scroll; fall back to native
+    if (window.lenis) window.lenis.scrollTo(el, { offset: -70 });
+    else el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <main className={s.page}>
       {/* hero */}
@@ -40,7 +48,7 @@ export default function Careers() {
             Join a team that retrofits, automates and fabricates the machines behind India&rsquo;s
             core industries — and trains the next generation of engineers along the way.
           </p>
-          <AnimButton to="/contact" label="View open roles" variant="orange" />
+          <AnimButton onClick={scrollToOpenings} label="View open roles" variant="orange" />
         </div>
         <div className={s.heroImage}>
           <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop" alt="Teja Machinery team" />
@@ -67,15 +75,16 @@ export default function Careers() {
       </section>
 
       {/* open positions */}
-      <section className={s.positions}>
+      <section id="openings" className={s.positions}>
         <div className={s.wrap}>
           <div className={s.head}>
             <span className={s.pill}><span className={s.pillDot} />Open positions</span>
             <h2 className={s.headTitle}>Current openings</h2>
           </div>
           <div className={s.posList}>
-            {positions.map((p) => (
+            {positions.map((p, i) => (
               <div key={p.title} className={s.posRow}>
+                <span className={s.posNum}>{String(i + 1).padStart(2, '0')}</span>
                 <span className={s.posTitle}>{p.title}</span>
                 <span className={s.posMeta}>{p.meta}</span>
                 <Link to="/contact" className={s.applyBtn}>

@@ -176,3 +176,9 @@
   .mid, .help { grid-column: auto; }
   .quoteCard { padding: 32px; }
 }
+@media (max-width: 560px) {
+  .section { padding: 60px 18px 70px; }
+  .quoteCard { padding: 28px 22px; }
+  .mid { padding: 22px 20px; }
+  .help { padding: 26px 22px; }
+}

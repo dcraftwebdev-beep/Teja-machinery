@@ -172,6 +172,6 @@
   .logoCell { width: 190px; height: 120px; }
 }
 @media (max-width: 560px) {
-  .section { padding: 70px 22px 32px; }
-  .caseCard { padding: 30px 26px; }
+  .section { padding: 60px 18px 32px; }
+  .caseCard { padding: 28px 22px; }
 }

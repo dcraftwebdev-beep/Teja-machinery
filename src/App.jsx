@@ -30,12 +30,13 @@ function AppContent() {
   useEffect(() => {
     const lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1, smoothWheel: true });
     lenisRef.current = lenis;
+    window.lenis = lenis; // used for in-page smooth anchor scrolling
     // keep ScrollTrigger in sync with Lenis' smoothed scroll position
     lenis.on('scroll', ScrollTrigger.update);
     let rafId;
     const raf = (time) => { lenis.raf(time); rafId = requestAnimationFrame(raf); };
     rafId = requestAnimationFrame(raf);
-    return () => { cancelAnimationFrame(rafId); lenis.off('scroll', ScrollTrigger.update); lenis.destroy(); lenisRef.current = null; };
+    return () => { cancelAnimationFrame(rafId); lenis.off('scroll', ScrollTrigger.update); lenis.destroy(); lenisRef.current = null; delete window.lenis; };
   }, []);
 
   // jump to top on route change
