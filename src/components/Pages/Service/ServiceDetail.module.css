@@ -1,0 +1,143 @@
+/* =============================================================
+   SERVICE DETAIL (inner) PAGE
+   ============================================================= */
+.page { background: #f2f2f2; color: #141414; font-family: var(--font-geist); overflow-x: clip; }
+.wrap { max-width: 1000px; margin: 0 auto; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 40px; padding: 8px 18px 8px 10px;
+  font-size: 14px; font-weight: 600; color: #141414;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+.pillDot { width: 12px; height: 12px; border-radius: 3px; background: var(--clr-accent); flex-shrink: 0; }
+.pillDark { background: #1b1917; border-color: rgba(255,255,255,0.10); color: #fff; }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  padding: 134px 30px 0;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+.heroInner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.heroTitle {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading-lg);
+  font-weight: 700; letter-spacing: -0.03em; color: #141414;
+  margin: 10px 0 0;
+}
+.heroDesc { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.5; color: #55524c; margin: 18px 0 0; max-width: 52ch; }
+.heroBtn { margin: 30px 0 50px; }
+.heroImage { width: 100%; max-width: 1600px; margin: 0 auto; height: clamp(320px, 46vw, 560px); }
+.heroImage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- OVERVIEW ---------- */
+.overview { padding: 90px 30px; background: #f2f2f2; }
+.eyebrow { font-size: 14px; font-weight: 600; color: #8a857f; letter-spacing: 0.02em; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.eyebrow::before { content: ''; width: 9px; height: 9px; border-radius: 2px; background: var(--clr-accent); }
+.overviewGrid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+.overviewTitle { font-family: var(--font-mona); font-size: clamp(28px, 3vw, 42px); font-weight: 700; letter-spacing: -0.02em; color: #141414; line-height: 1.1; }
+.overviewText { font-size: 18px; line-height: 1.3; color: #55524c; font-weight: 500; }
+
+/* ---------- CAPABILITIES (dark) ---------- */
+.caps {
+  position: relative; background: #0a0a0a; color: #fff;
+  padding: 90px 30px 130px; overflow: hidden;
+}
+.caps::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 240px;
+  background: linear-gradient(0deg, rgba(214,74,20,0.75) 0%, rgba(140,46,12,0.22) 55%, transparent 100%);
+  pointer-events: none; z-index: 0;
+}
+/* dashed vertical grid overlay */
+.capGuides {
+  position: absolute; top: 0; bottom: 0; left: 30px; right: 30px; z-index: 0;
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); pointer-events: none;
+}
+.capGuides span { border-right: 1px dashed rgba(255,255,255,0.08); }
+.capGuides span:last-child { border-right: none; }
+
+.capsInner { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; }
+
+/* header: pill left, big title right */
+.capsHead {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+  gap: 30px; margin-bottom: 60px; padding-top: 16px;
+}
+.capsTitle {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading-lg);
+  font-weight: var(--fw-heading);
+  letter-spacing: -0.03em; line-height: 0.95; color: #fff;
+  text-align: right; margin: 0; max-width: 62%;
+}
+
+/* Category / Details table */
+.capTable { position: relative; }
+.capHeadRow {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+.capHeadCell { font-family: var(--font-geist); font-size: 20px; font-weight: 600; color: #fff; }
+.capRow {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  padding: 44px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  align-items: start;
+}
+.capCat {
+  font-family: var(--font-geist);
+  font-size: clamp(18px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em; color: #f0ede8;
+}
+.capDetails {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.capDetails li {
+  position: relative; padding-left: 24px;
+  font-size: clamp(16px, 1.3vw, 19px); font-weight: 500; color: #b8b3ac; line-height: 1.35;
+}
+.capDetails li::before {
+  content: ''; position: absolute; left: 4px; top: 0.55em;
+  width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.55);
+}
+
+/* ---------- WORKFLOW ---------- */
+.workflow { padding: 90px 30px; background: #f2f2f2; }
+.workflowHead { max-width: 1400px; margin: 0 auto 48px; }
+.workflowTitle {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading);
+  font-weight: 700; letter-spacing: -0.03em; color: #141414; margin: 18px 0 0;
+}
+.workflowTitle em { font-style: normal; color: var(--clr-accent); }
+.steps { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step { background: #fff; border-radius: 4px 4px 8px; padding: 28px 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.stepNum {
+  width: 44px; height: 44px; border-radius: 4px 4px 8px;
+  background: #141414; color: #fff; font-family: var(--font-mona); font-weight: 700; font-size: 17px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.stepTitle { font-family: var(--font-mona); font-size: 20px; font-weight: 700; color: #141414; margin-bottom: 10px; }
+.stepDesc { font-size: 15px; line-height: 1.5; color: #55524c; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .overviewGrid { grid-template-columns: 1fr; gap: 24px; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .capsHead { flex-direction: column; gap: 22px; margin-bottom: 40px; }
+  .capsTitle { text-align: left; max-width: 100%; }
+  .capHeadRow { grid-template-columns: 1fr; }
+  .capHeadRow .capHeadCell:last-child { display: none; }
+  .capRow { grid-template-columns: 1fr; gap: 16px; padding: 30px 0; }
+  .capGuides { display: none; }
+}
+@media (max-width: 560px) {
+  .steps { grid-template-columns: 1fr; }
+  .hero { padding: 100px 20px 0; }
+  .overview, .caps, .workflow { padding: 60px 20px; }
+}

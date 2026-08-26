@@ -1,0 +1,133 @@
+/* =============================================================
+   FOUNDER SHOWCASE — video band with founder card + quote
+   ============================================================= */
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1a0d05;
+  font-family: var(--font-geist);
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* warm orange industrial wash */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(20,10,4,0.55) 0%, rgba(20,10,4,0.15) 35%, rgba(20,10,4,0.55) 100%),
+    linear-gradient(120deg, rgba(232,101,26,0.55) 0%, rgba(184,78,16,0.35) 60%, rgba(20,10,4,0.4) 100%);
+  mix-blend-mode: multiply;
+}
+.grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+/* founder card — dark glass panel, photo on top, name/role below */
+.card {
+  position: relative;
+  width: 270px;
+  max-width: 88vw;
+  padding: 14px 14px 8px;
+  border-radius: 6px;
+  background: rgba(18,11,6,0.42);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cardInfo {
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+.cardName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.cardRole {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.62);
+  margin-top: 6px;
+}
+
+.quote {
+  max-width: 360px;
+padding-top: 40px;
+  font-family: var(--font-mona);
+  font-size: clamp(15px, 1vw, 18px);
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+/* play / pause control */
+.playBtn {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10,5,2,0.72);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s var(--ease-out), background 0.3s ease;
+}
+.playBtn:hover { transform: scale(1.08); background: var(--clr-accent); }
+.playBtn svg { width: 16px; height: 16px; }
+
+@media (max-width: 640px) {
+  .card { width: 320px; }
+  .card img { height: 260px; }
+  .cardName { font-size: 21px; }
+  .cardRole { font-size: 15px; }
+  .playBtn { right: 18px; bottom: 18px; }
+}

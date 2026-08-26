@@ -1,0 +1,50 @@
+/* ---------- SERVICES · CARD GRID ---------- */
+.section { background: #f2f2f2; padding: 20px 30px 60px; font-family: var(--font-geist); }
+.grid {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.card {
+  position: relative;
+  display: block;
+  background: #fff;
+  border-radius: 4px 4px 8px;
+  padding: 16px 16px 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(0,0,0,0.08); }
+
+/* arrow reveals in the top-right on hover */
+.hoverArrow {
+  position: absolute;
+  top: 28px; right: 28px;
+  z-index: 2;
+  width: 44px; height: 44px;
+  border-radius: 4px 4px 8px;
+  background: var(--clr-accent);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translate(-6px, 6px) scale(0.9);
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.hoverArrow svg { width: 20px; height: 20px; }
+.card:hover .hoverArrow { opacity: 1; transform: translate(0, 0) scale(1); }
+.thumb {
+  width: 100%; height: 250px; border-radius: 6px 6px 10px; object-fit: cover; display: block;
+  margin-bottom: 24px;
+}
+.title {
+  font-family: var(--font-mona);
+  font-size: clamp(22px, 1.9vw, 27px);
+  font-weight: 600; letter-spacing: -0.02em; color: #141414;
+  margin: 0 6px 12px;
+}
+.desc { font-size: 18px; line-height: 1.5; color: #55524c; margin: 0 6px; max-width: 34ch; font-weight: 500; }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .thumb { height: 220px; }
+}

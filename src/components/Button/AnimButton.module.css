@@ -1,0 +1,82 @@
+/* =============================================================
+   ANIM BUTTON — shared pill button (two colors: dark / orange)
+   ============================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--font-geist);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 7px 7px 7px 22px;
+  border-radius: 4px 4px 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
+}
+
+
+.dark { background: #141414; }
+.orange { background: var(--clr-accent); }
+
+/* light — for dark backgrounds (CTA banners): white pill, dark text, orange arrow */
+.light { background: #fff; }
+.light .text, .light .textHover { color: #141414; }
+.light .sq { background: var(--clr-accent); }
+
+/* sliding label: current slides up & out, duplicate rises from the bottom */
+.label {
+  display: inline-grid;
+  overflow: hidden;
+  line-height: 1.15;
+}
+.text,
+.textHover {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+  color: #fff;                       /* explicit — beats `.page a { color: inherit }` */
+  transition: transform 0.5s var(--ease-out);
+}
+.textHover { transform: translateY(120%); }
+.btn:hover .text { transform: translateY(-120%); }
+.btn:hover .textHover { transform: translateY(0); }
+
+/* icon square: current arrow exits right, new arrow enters from the left */
+.sq {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.dark .sq { background: var(--clr-accent); }
+.orange .sq { background: #141414; }
+
+.iconWrap {
+  display: inline-grid;
+  overflow: hidden;
+  width: 18px;
+  height: 16px;
+}
+.iconMain,
+.iconHover {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s var(--ease-out);
+}
+.iconHover { transform: translateX(-160%); }
+.btn:hover .iconMain { transform: translateX(160%); }
+.btn:hover .iconHover { transform: translateX(0); }
+.iconWrap svg { width: 18px; height: 16px; }
+
+@media (max-width: 480px) {
+  .btn { font-size: 15px; padding: 6px 6px 6px 18px; gap: 14px; }
+  .sq { width: 40px; height: 40px; }
+}

@@ -1,0 +1,332 @@
+/* Container & Layout */
+.section {
+  background-color: var(--clr-light, #ffffff);
+  color: var(--clr-ink, #1a1a1a);
+  padding: var(--space-xl) 0;
+  font-family: var(--font-sans);
+}
+
+.container {
+  max-width: var(--container-max, 1400px);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--clr-line, rgba(0, 0, 0, 0.1));
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--clr-ink-soft);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--clr-accent);
+}
+
+.heading {
+  font-family: var(--font-mona);
+    font-size: clamp(38px, 5vw, 72px);
+    line-height: 1.02;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #141414;
+    margin: 0;
+    max-width: 700px;
+}
+
+.heading span {
+  color: var(--clr-accent);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 106px 1.6fr 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1300px;
+  align-items: stretch; /* Ensures all columns stretch to match height */
+}
+
+/* Sidebar Column (Avatars) */
+.avatarSidebar {
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Added pointer cursor for clickability */
+}
+
+.avatar:hover {
+  opacity: 0.8;
+}
+
+.activeAvatar {
+  opacity: 1;
+  border: 3px solid var(--clr-accent);
+  transform: scale(1.1);
+}
+
+/* Testimonial Card */
+.testimonialCard {
+  background-color: #f9fafb;
+  border-radius: var(--radius-lg, 12px);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  
+  /* Increased Height */
+  min-height: 480px; 
+  height: 100%;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.quote {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #222;
+  max-width: 90%;
+  
+  /* Simple fade-in animation when quote text changes */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.author {
+  /* Forces the author block to the absolute bottom, creating the maximum gap */
+  margin-top: auto; 
+}
+
+.authorName {
+  font-family: var(--font-archivo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.authorRole {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Middle Column (Image + Stats) */
+.middleCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  
+  /* Matches the height increase */
+  min-height: 480px; 
+  height: 100%;
+}
+
+.imageCard {
+  flex: 1;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.imageOverlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.imageTextSmall {
+  font-family: var(--font-mona);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.imageTextLarge {
+  font-family: var(--font-archivo);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.statsCard {
+  background-color: var(--clr-accent);
+  border-radius: 6px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  color: var(--clr-white);
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-family: var(--font-archivo);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+/* CTA Card */
+.ctaCard {
+  background: linear-gradient(150deg, #301104 0%, #111111 50%);
+  border-radius: 6px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--clr-white);
+  
+  /* Increased Height */
+  min-height: 480px; 
+  height: 100%;
+}
+
+.supportIconWrapper {
+  margin-bottom: 2rem;
+}
+
+.ctaHeading {
+  font-family: var(--font-archivo);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem !important;
+}
+
+.ctaText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background-color: var(--clr-white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.btnText {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.btnIcon {
+  background-color: var(--clr-accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .avatarSidebar {
+    flex-direction: row;
+    grid-column: span 2;
+    padding: 1rem;
+    justify-content: center;
+  }
+  .testimonialCard, .ctaCard, .middleCol {
+    min-height: 400px; /* slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .avatarSidebar {
+    grid-column: 1;
+  }
+}

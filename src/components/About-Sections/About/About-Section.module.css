@@ -1,0 +1,320 @@
+/* =============================================
+   ABOUT PAGE — uses global CSS variables
+   ============================================= */
+
+.page {
+  background: var(--clr-bg);
+  overflow-x: hidden;
+}
+
+/* ── Shared reveal animation ── */
+[class*='mileCard'],
+[class*='mvPanel'],
+[class*='memberCard'],
+[class*='certCard'],
+[class*='statPill'],
+[class*='ctaReveal'] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.vis {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ══════════════════════════════
+   §1  HERO — EDITORIAL SPLIT
+   ══════════════════════════════ */
+.heroSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 60px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* LEFT panel */
+.heroLeft {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=900&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.heroImgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10, 10, 10, 0.15) 0%,
+    rgba(10, 10, 10, 0.65) 60%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+}
+
+.heroImgContent {
+  position: absolute;
+  inset: 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heroEst {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heroEst::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--clr-accent);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 7rem);
+  color: var(--clr-white);
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.heroTitleAccent {
+  color: var(--clr-accent);
+}
+
+.heroStatsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--clr-border);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.statPill {
+  background: rgba(10, 10, 10, 0.7);
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.statPillNum {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--clr-white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.statPillLbl {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-dim);
+}
+
+/* RIGHT scroll feed */
+.heroRight {
+  border-left: 1px solid var(--clr-border);
+  background: var(--clr-bg-2);
+  overflow-y: auto;
+}
+
+.heroRightInner {
+  padding: 5rem 3.5rem 5rem;
+}
+
+.sectionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 1.2rem;
+}
+
+.sectionTag::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--clr-accent);
+}
+
+.heroRightTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  color: var(--clr-white);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.heroRightLead {
+  font-size: 1.1rem;
+  font-family: var(--font-paragraph);
+  color: var(--clr-text);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.heroRightBody {
+  font-size: 1.1rem;
+  color: var(--clr-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-paragraph);
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* Milestone feed (article-card layout) */
+.mileFeed {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--clr-border);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.mileCard {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--clr-bg);
+  transition: background var(--duration-fast), opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.mileCard:hover {
+  background: var(--clr-bg-3);
+}
+
+.mileImgWrap {
+  width: 90px;
+  flex-shrink: 0;
+  background: var(--clr-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--clr-border);
+}
+
+.mileYear {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--clr-accent);
+  letter-spacing: 0.04em;
+  writing-mode: horizontal-tb;
+}
+
+.mileBody {
+  flex: 1;
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.mileDot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  flex-shrink: 0;
+}
+
+.mileText {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  line-height: 1.55;
+}
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .heroLeft {
+    position: relative;
+    height: 65vw;
+    min-height: 360px;
+  }
+
+  .heroRight {
+    border-left: none;
+    border-top: 1px solid var(--clr-border);
+  }
+
+  .heroRightInner {
+    padding: 3rem 2rem;
+  }
+
+  .ctaInner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .mvGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .certGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .heroStatsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

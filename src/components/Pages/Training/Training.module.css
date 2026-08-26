@@ -1,0 +1,12 @@
+/* =============================================================
+   TRAINING PAGE (TTTI) — wrapper only. Sections own their modules:
+   sections/TrainingHero, TrainingCourses, TrainingFanuc, TrainingInfra
+   (CtaBanner reused from Home).
+   ============================================================= */
+.page {
+  background: #f2f2f2;
+  color: #141414;
+  font-family: var(--font-geist);
+  overflow-x: clip;
+  min-height: 100vh;
+}

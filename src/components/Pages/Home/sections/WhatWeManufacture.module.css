@@ -1,0 +1,188 @@
+/* =============================================================
+   WHAT WE MANUFACTURE — exploded diagram + product spec cards
+   ============================================================= */
+.section {
+  position: relative;
+  width: 100%;
+  background: #0d0c0b;
+  color: #fff;
+  padding: 0 30px 70px;
+  font-family: var(--font-geist);
+  overflow: hidden;
+}
+/* top orange glow */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(180deg, rgba(214,74,20,0.85) 0%, rgba(140,46,12,0.25) 45%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+/* vertical dashed guides aligned with the 4 card columns */
+.guides { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.guides span {
+  position: absolute; top: 0; bottom: 0; width: 1px;
+  background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.10) 0 6px, transparent 6px 13px);
+}
+.guides span:nth-child(1){ left: 25%; }
+.guides span:nth-child(2){ left: 50%; }
+.guides span:nth-child(3){ left: 75%; }
+
+/* ---------- TOP ROW ---------- */
+.topRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #1b1917;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 40px;
+  padding: 8px 18px 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.tagDot { width: 12px; height: 12px; border-radius: 3px; background: var(--clr-accent); }
+.stat { text-align: right; max-width: 320px; }
+.statBig {
+  font-family: var(--font-mona);
+  font-size: clamp(48px, 5vw, 74px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.statBig em { font-style: normal; color: var(--clr-accent); }
+.statDesc { margin-top: 12px; font-size: 15px; line-height: 1.5; color: #9a938c; }
+
+/* ---------- DIAGRAM ---------- */
+.diagram {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1106px;
+  margin: 10px auto 40px;
+}
+.explodedImg { width: 100%; height: auto; display: block; }
+.callouts {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.label {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 500;
+  color: #cfc9c3;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* ---------- PRODUCT CARDS ---------- */
+.cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+.card { padding: 28px 26px; }
+.cardTitle {
+  font-family: var(--font-mona);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff;
+  min-height: 2.3em;
+  margin-bottom: 18px !important;
+}
+.cardImg {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+  background: #16150f;
+}
+.spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 13px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.specLabel { font-size: 13px; color: #8a857f; flex-shrink: 0; }
+.specVal { font-size: 13px; font-weight: 700; color: #fff; text-align: right; }
+
+/* ---------- BOTTOM ROW ---------- */
+.bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+.bottomHeading {
+  font-family: var(--font-mona);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.06;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  max-width: 24ch;
+  margin: 0;
+}
+.bottomActions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.download svg { width: 16px; height: 16px; }
+.download:hover { color: var(--clr-accent); }
+/* dark button needs a visible edge on the near-black background */
+.viewBtn { border: 1px solid rgba(255,255,255,0.22); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .guides span:nth-child(1){ left: 50%; }
+  .guides span:nth-child(2), .guides span:nth-child(3){ display: none; }
+  .label { font-size: 12px; }
+}
+@media (max-width: 620px) {
+  .cards { grid-template-columns: 1fr; }
+  .guides { display: none; }
+  .topRow { flex-direction: column; }
+  .stat { text-align: left; }
+  .card { padding: 24px 6px; }
+}

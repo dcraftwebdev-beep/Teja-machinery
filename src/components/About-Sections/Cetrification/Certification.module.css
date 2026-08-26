@@ -1,0 +1,425 @@
+/* =========================================
+   §4 CERTIFICATIONS
+   ========================================= */
+.certSection {
+  padding: 8rem 0;
+  background: var(--clr-bg);
+  position: relative;
+}
+
+.certHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--clr-white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.certTitle span {
+  color: var(--clr-accent);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.certSub {
+  font-size: 1.1rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+}
+
+/* Certifications Grid */
+.certGridWrapper {
+  background: var(--clr-bg-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 1px; /* Creates the inner borders effect */
+  overflow: hidden;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--clr-border); /* The gap color */
+}
+
+.certCard {
+  background: var(--clr-bg-2);
+  padding: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  /* Reveal Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out), background 0.3s;
+}
+
+.certCard.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certCard:hover {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+/* Hover Accent Line */
+.certAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.certCard:hover .certAccent {
+  transform: scaleX(1);
+}
+
+.certTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certCode {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--clr-accent);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.certBadge {
+  color: var(--clr-border-bright);
+  transition: color 0.3s;
+}
+
+.certCard:hover .certBadge {
+  color: var(--clr-accent);
+}
+
+.certInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.certTitle2 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--clr-white);
+  margin: 0;
+}
+
+.certSub2 {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-dim);
+  margin: 0;
+}
+
+/* =========================================
+   §5 CTA BANNER
+   ========================================= */
+.ctaSection {
+  position: relative;
+  padding: 8rem 0;
+  border-top: 1px solid var(--clr-border);
+  overflow: hidden;
+}
+
+/* Background Effects */
+.ctaBg {
+  position: absolute;
+  inset: 0;
+  background: var(--clr-bg-2);
+  z-index: 0;
+}
+
+.ctaGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+.ctaGlow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 50vh;
+  background: radial-gradient(ellipse at bottom, rgba(232, 101, 26, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* CTA Left */
+.ctaEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  box-shadow: 0 0 10px var(--clr-accent);
+  animation: pulse 2s infinite;
+}
+
+.ctaHeading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--clr-white);
+  margin-bottom: 1.5rem;
+}
+
+.ctaHighlight {
+  color: var(--clr-accent);
+}
+
+.ctaBody {
+  font-size: 1.1rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+/* CTA Buttons */
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast);
+}
+
+.btnPrimary:hover {
+  background: var(--clr-accent-2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(232, 101, 26, 0.2);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--clr-white);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--clr-border-bright);
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast);
+}
+
+.btnGhost:hover {
+  border-color: var(--clr-white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* CTA Right */
+.ctaStatsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statBox {
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--clr-white);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statNum span {
+  color: var(--clr-accent);
+  font-size: 2rem;
+}
+
+.statLbl {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-dim);
+}
+
+.trustSection {
+  border-top: 1px solid var(--clr-border);
+  padding-top: 2rem;
+}
+
+.trustLabel {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.trustPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.trustPill {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--clr-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--clr-border-bright);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  transition: border-color var(--duration-fast), color var(--duration-fast);
+}
+
+.trustPill:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* Scroll Animations */
+.ctaReveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.ctaReveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+@media (max-width: 1024px) {
+  .certGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ctaInner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .ctaLeft {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaStatsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaActions {
+    justify-content: center;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(232, 101, 26, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(232, 101, 26, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 101, 26, 0); }
+}

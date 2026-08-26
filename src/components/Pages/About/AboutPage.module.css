@@ -1,0 +1,10 @@
+/* =============================================================
+   ABOUT PAGE — wrapper only. Each section owns its own module:
+   sections/AboutHero, AboutJourney, AboutClients, AboutBand, AboutTeam
+   ============================================================= */
+.page {
+  background: #e9e8e5;
+  color: #141414;
+  font-family: var(--font-geist);
+  overflow-x: clip;
+}

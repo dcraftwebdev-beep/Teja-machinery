@@ -1,0 +1,317 @@
+/* ============ SECTION LAYOUT ============ */
+.offerSection {
+  padding: 8rem 0;
+  background: var(--clr-bg-2);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  width: 60vw;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(232, 101, 26, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ============ LEFT CONTENT ============ */
+.header {
+  margin-bottom: 3rem;
+}
+
+.tagDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  margin-right: 0.5rem;
+  box-shadow: 0 0 8px var(--clr-accent);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: var(--clr-white);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.title span {
+  color: var(--clr-accent);
+}
+
+.introText {
+  font-size: 1.1rem;
+  font-family: var(--font-paragraph);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 600px;
+  padding-left: 1rem;
+  border-left: 2px solid var(--clr-accent);
+}
+
+/* The List of Offerings */
+.offeringsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.offerCard {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgba(10, 10, 10, 0.4);
+  border: 1px solid var(--clr-border);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: transform var(--duration-fast), background var(--duration-fast), border-color var(--duration-fast);
+}
+
+.offerCard:hover {
+  background: rgba(20, 20, 20, 0.8);
+  transform: translateX(10px);
+  border-color: rgba(232, 101, 26, 0.3);
+}
+
+.offerIcon {
+  color: var(--clr-accent);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(232, 101, 26, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.offerCard p {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--clr-white);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.btnPrimary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast);
+}
+
+.btnPrimary:hover {
+  background: var(--clr-accent-2);
+  transform: translateY(-2px);
+  
+}
+
+/* ============ RIGHT CONTENT (IMAGES) ============ */
+.visualRight {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.imageComposition {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+/* Crosshairs for the engineered look */
+.crosshair {
+  position: absolute;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: var(--clr-accent);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* 1. The Large Product Image (Background) */
+.productImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--clr-border-bright);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s var(--ease-out);
+}
+
+.productImageWrapper:hover .productImg {
+  transform: scale(1.05);
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.8), transparent 50%);
+  pointer-events: none;
+}
+
+/* 2. The Certificate Image (Foreground) */
+.certImageWrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 65%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: -10px -10px 40px rgba(0,0,0,0.7);
+  z-index: 5;
+  background: var(--clr-bg);
+}
+
+.certImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+
+.certImageWrapper:hover .certImg {
+  transform: scale(1.05);
+}
+
+.certGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(232, 101, 26, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Labels on the images */
+.imgLabel {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid var(--clr-border);
+}
+
+/* ============ SCROLL REVEAL ============ */
+.revealItem {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.revealItem.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ MEDIA QUERIES ============ */
+@media (max-width: 1100px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .visualRight {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .offerCard {
+    padding: 1rem;
+  }
+  
+  .offerCard p {
+    font-size: 0.85rem;
+  }
+
+  .visualRight {
+    min-height: 400px;
+  }
+
+  .imageComposition {
+    height: 400px;
+  }
+
+  .productImageWrapper {
+    width: 85%;
+    height: 65%;
+  }
+
+  .certImageWrapper {
+    width: 70%;
+    height: 60%;
+  }
+}

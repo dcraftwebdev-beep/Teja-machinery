@@ -1,0 +1,43 @@
+/* ---------- TRAINING · ABOUT FANUC (dark) ---------- */
+.section {
+  position: relative; background: #0d0c0b; color: #fff;
+  padding: 90px 30px; overflow: hidden; font-family: var(--font-geist);
+}
+.section::before {
+  content: ''; position: absolute; top: 0; right: 0; width: 60%; height: 60%;
+  background: radial-gradient(circle at 100% 0, rgba(214,74,20,0.4), transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+.wrap { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; }
+
+.top { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #1b1917; border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 40px; padding: 8px 18px 8px 10px;
+  font-size: 14px; font-weight: 600; color: #fff; width: fit-content;
+}
+.pillDot { width: 12px; height: 12px; border-radius: 3px; background: var(--clr-accent); flex-shrink: 0; }
+.heading {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading);
+  font-weight: 700; line-height: 1.06; letter-spacing: -0.02em; color: #fff;
+  margin: 20px 0 0; max-width: 16ch;
+}
+.heading em { font-style: normal; color: var(--clr-accent); }
+.para { font-size: 16px; line-height: 1.65; color: #b8b2ac; margin-top: 18px; }
+.para + .para { margin-top: 14px; }
+
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 50px; }
+.stat { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 26px 24px; }
+.statNum { font-family: var(--font-mona); font-size: clamp(30px, 3vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: var(--clr-accent); line-height: 1; }
+.statLabel { font-size: 15px; color: #cfc9c3; margin-top: 10px; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .top { grid-template-columns: 1fr; gap: 28px; }
+  .stats { margin-top: 20px; }
+}
+@media (max-width: 480px) {
+  .section { padding: 60px 20px; }
+  .stats { grid-template-columns: 1fr; }
+}

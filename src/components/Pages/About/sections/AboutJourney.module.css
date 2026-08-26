@@ -1,0 +1,182 @@
+/* ---------- ABOUT · OUR JOURNEY ---------- */
+.journey { 
+  padding: 120px 30px; 
+  background-color: #f2f2f2; 
+  /* Faint vertical lines overlay */
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent calc(33.333% - 1px),
+    rgba(0, 0, 0, 0.04) calc(33.333% - 1px),
+    rgba(0, 0, 0, 0.04) 33.333%
+  );
+  font-family: var(--font-geist, sans-serif); 
+  color: #141414; 
+}
+
+.wrap { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.pillWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pill {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  background: #fdfdfd; 
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 40px; 
+  padding: 6px 14px 6px 10px;
+  font-size: 13px; 
+  font-weight: 500; 
+  color: #141414;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.pillDot { 
+  width: 6px; 
+  height: 6px; 
+  border-radius: 1px; 
+  background: #d14725; 
+  flex-shrink: 0; 
+}
+
+.journeyHead { 
+  display: grid; 
+  grid-template-columns: 1fr 2fr; 
+  gap: 40px; 
+  align-items: start; 
+  margin-bottom: 70px; 
+}
+
+.journeyHeading {
+  font-family: var(--font-mona, sans-serif);
+  font-size: var(--fs-heading);
+  line-height: 1.05;
+  font-weight: 600;
+  color: #151515;
+  max-width: 20ch;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.journeyHeading em { 
+  font-style: normal; 
+  color: #d14725; 
+}
+
+.journeyGrid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 60px; 
+  align-items: stretch; 
+}
+
+.founderCard {
+  position: relative; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.founderCard img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.founderInfo {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  padding: 40px 18px 24px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.9) 85%);
+  color: #fff; 
+  text-align: center;
+}
+
+.founderName { 
+  font-size: 18px; 
+  font-weight: 700; 
+}
+
+.founderRole { 
+  font-size: 14px; 
+  color: rgba(255,255,255,0.7); 
+  margin-top: 4px; 
+}
+
+.colTitle { 
+  font-family: var(--font-mona, sans-serif); 
+  font-size: 24px; 
+  font-weight: 600; 
+  color: #111; 
+  margin: 0 0 24px; 
+  letter-spacing: -0.01em;
+}
+
+.storyPara { 
+  font-size: 18px; 
+  line-height: 1.2; 
+  color: #5C5C5C; 
+  font-weight: 500;
+  margin: 0 0 20px; 
+}
+
+.capList { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.capItem {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 18px; 
+  font-weight: 500; 
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+/* Remove border from last item if needed */
+.capItem:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.capItem:hover { 
+  color: #111; 
+}
+
+.capItem svg { 
+  width: 16px; 
+  height: 16px; 
+  color: #d14725; 
+  flex-shrink: 0; 
+}
+
+.capBtn { 
+  margin-top: 32px; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .journeyHead { grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
+  .journeyGrid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .founderCard { grid-column: 1 / -1; min-height: 280px; }
+}
+
+@media (max-width: 760px) {
+  .journeyGrid { grid-template-columns: 1fr; gap: 40px; }
+  .journey { padding: 60px 20px; background-image: none; }
+}

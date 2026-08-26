@@ -1,0 +1,48 @@
+/* ---------- ABOUT · LEADERS / TEAM ---------- */
+.team { padding: 90px 30px 110px; background: #e9e8e5; font-family: var(--font-geist); color: #141414; }
+.wrap { max-width: 1400px; margin: 0 auto; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 40px; padding: 8px 18px 8px 10px;
+  font-size: 14px; font-weight: 600; color: #141414;
+  width: fit-content; box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+.pillDot { width: 12px; height: 12px; border-radius: 3px; background: var(--clr-accent); flex-shrink: 0; }
+
+.teamGrid { display: grid; grid-template-columns: 360px 1fr; gap: 56px; align-items: start; }
+.teamHeading {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading);
+  font-weight: 700; letter-spacing: -0.02em; line-height: 1.02; color: #141414;
+  margin: 18px 0 26px;
+}
+.teamHeading em { font-style: normal; color: var(--clr-accent); }
+.teamPhoto { width: 100%; border-radius: 14px; overflow: hidden; }
+.teamPhoto img { width: 100%; height: 300px; object-fit: cover; display: block; }
+
+.teamList { display: flex; flex-direction: column; }
+.memberRow {
+  display: grid; grid-template-columns: 1.2fr 1.4fr auto; gap: 24px; align-items: center;
+  padding: 20px 6px;
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+.memberRow:last-child { border-bottom: 1px solid rgba(0,0,0,0.10); }
+.memberName { font-family: var(--font-mona); font-size: clamp(20px, 1.8vw, 26px); font-weight: 700; letter-spacing: -0.01em; color: #141414; }
+.memberRole { font-size: 18px; color: #8a857f; font-weight: 500; letter-spacing: -0.01em; }
+.memberSocials { display: flex; gap: 10px; }
+.memberSocials a {
+  width: 30px; height: 30px; border-radius: 7px; background: #dedbd5; color: #55524c;
+  display: flex; align-items: center; justify-content: center; transition: background 0.2s ease, color 0.2s ease;
+}
+.memberSocials a:hover { background: var(--clr-accent); color: #fff; }
+.memberSocials svg { width: 15px; height: 15px; }
+
+@media (max-width: 1024px) {
+  .teamGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .memberRow { grid-template-columns: 1fr auto; }
+  .memberRole { display: none; }
+}

@@ -1,0 +1,13 @@
+/* =============================================================
+   SERVICES PAGE — wrapper only. Sections own their own modules:
+   sections/ServiceHero, ServiceGrid, ServiceFaq, ServiceContact
+   (CtaBanner reused from Home).
+   ============================================================= */
+.page {
+  background: #f2f2f2;
+  color: #141414;
+  font-family: var(--font-geist);
+  overflow-x: clip;
+  min-height: 100vh;
+}
+  

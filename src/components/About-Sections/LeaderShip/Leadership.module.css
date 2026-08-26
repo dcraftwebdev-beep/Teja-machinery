@@ -1,0 +1,209 @@
+/* ============ SECTION LAYOUT ============ */
+.teamSection {
+  padding: 6rem 0 8rem;
+  background: var(--clr-bg-2);
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+}
+
+/* Optional subtle background noise/pattern specifically for this section */
+.teamSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at top right, rgba(232, 101, 26, 0.05), transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============ HEADER ============ */
+.teamHeader {
+  margin-bottom: 4rem;
+  max-width: 600px; /* Keeps text constrained and readable */
+}
+
+.teamTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--clr-white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.teamTitle span {
+      font-family: var(--font-display);
+       font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--clr-accent);
+ 
+  font-weight: 300;
+}
+
+.teamSub {
+  font-size: 1.1rem;
+  font-family: var(--font-paragraph);
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+}
+
+/* ============ TEAM GRID ============ */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch; /* Ensures all cards match height */
+}
+
+/* ============ MEMBER CARD ============ */
+.memberCard {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+  /* Scroll Reveal Defaults */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out), background 0.3s, border-color 0.3s;
+}
+
+.memberCard.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.memberCard:hover {
+  background: rgba(20, 20, 20, 0.9);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Header Area */
+.memberTop {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+}
+
+/* Initials Avatar */
+.memberAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid var(--av-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--av-clr);
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.memberMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex-grow: 1; /* Pushes the link icon to the right */
+}
+
+.memberName {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--clr-white);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.memberRole {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-dim);
+}
+
+/* Subtle corner icon */
+.memberLink {
+  color: var(--clr-text-dim);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity var(--duration-normal), transform var(--duration-normal), color var(--duration-fast);
+}
+
+.memberCard:hover .memberLink {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--clr-accent);
+}
+
+/* Biography Text */
+.memberBio {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1; /* Pushes the bottom accent bar down if texts are uneven */
+}
+
+/* Colored Bottom Bar Effect */
+.memberAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.3;
+  transform: scaleX(0.5);
+  transform-origin: left;
+  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-normal);
+}
+
+.memberCard:hover .memberAccent {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ============ MEDIA QUERIES ============ */
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 4rem 0 5rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .memberCard {
+    padding: 2rem;
+  }
+}

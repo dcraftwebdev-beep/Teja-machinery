@@ -1,0 +1,307 @@
+/* Base Footer Wrapper */
+.footer {
+  background-color: #111111; /* Deep dark background */
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-sans, sans-serif);
+  color: #ffffff;
+}
+
+/* --- Decorative Background Elements --- */
+.glowTopRight {
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(224, 79, 38, 0.4) 0%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowBottomLeft {
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(224, 79, 38, 0.25) 0%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.watermark {
+  position: absolute;
+  bottom: -2vw;
+  right: 0;
+  font-family: var(--font-archivo, sans-serif);
+  font-size: 14vw; /* Scales massively with screen */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  line-height: 0.8;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  letter-spacing: -0.02em;
+}
+
+/* --- Main Layout Container --- */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  /* Use padding on sides instead of within columns to align grid lines nicely */
+  padding: 0 2rem; 
+}
+
+/* Full-height dashed grid overlay */
+.gridLines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  right: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gridLine {
+  border-right: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.gridLine:last-child {
+  border-right: none;
+}
+
+/* Ensures content sits above background layers */
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Brand row --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 3rem 0 0;
+}
+.brandLogo {
+  height: 48px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.brandText {
+  font-family: var(--font-mona, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* --- Top Section (4 Columns) --- */
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.col {
+  padding: 6rem 2rem;
+}
+
+/* Align first and last columns flush with the container edges */
+.col:first-child {
+  padding-left: 0;
+}
+.col:last-child {
+  padding-right: 0;
+}
+
+/* Typography */
+.colTitle {
+  font-family: var(--font-archivo, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.colText {
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Newsletter Form */
+.newsletterForm {
+  display: flex;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  padding: 0.35rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s ease;
+}
+
+.newsletterForm:focus-within {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.submitBtn {
+  background-color: #ffffff;
+  color: #111111;
+  border: none;
+  border-radius: 4px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+  opacity: 0.85;
+}
+
+/* Links Section */
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.linkList a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.linkList a:hover {
+  color: #ffffff;
+}
+
+.activeLink {
+  color: var(--clr-accent, #e04f26) !important;
+}
+
+/* Info Lists (Contact & Hours) */
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Bottom Bar --- */
+.bottomBar {
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.copyright span {
+  color: #ffffff;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.socialLink:hover {
+  opacity: 0.7;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 1100px) {
+  .topGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gridLines {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col {
+    padding: 4rem 2rem;
+  }
+  .col:nth-child(3),
+  .col:nth-child(4) {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+  .gridLines {
+    display: none; /* Hide dashed lines on mobile for cleaner stack */
+  }
+  .col {
+    padding: 2rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  .col:last-child {
+    border-bottom: none;
+  }
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,115 @@
+/* =============================================
+   CLIENTS SCROLLING MARQUEE
+   ============================================= */
+.section {
+  padding: 4rem 0;
+  background-color: var(--clr-light, #ffffff);
+  overflow: hidden; /* Hide the scrollbar and overflowing cards */
+}
+
+/* ── Marquee Container & Track ── */
+.marqueeContainer {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Optional: Add a subtle fade on the left and right edges */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+
+  width: max-content;
+  
+  /* The animation moves the track left by exactly half its total width (one full set of logos) */
+  animation: scrollMarquee 40s linear infinite;
+}
+
+/* Pause the scrolling when a user hovers over it */
+.marqueeContainer:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.75rem)); /* 50% width + half the gap */
+  }
+}
+
+/* ── Light Client Cards (matching screenshot) ── */
+.clientCard {
+ 
+  border-radius: 8px;
+  width: 280px; /* Fixed width to match the screenshot proportions */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevents cards from squishing */
+  padding: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+
+.logoImg {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  padding: 10px;
+  border:1px solid #b7abab;
+  /* Assuming your original logos might be colorful, this forces them dark/black to match the UI */
+  filter: grayscale(100%) contrast(1.2) opacity(0.8);
+  transition: opacity 0.3s ease;
+}
+
+.clientCard:hover .logoImg {
+  opacity: 1;
+}
+
+/* ── Fallback Text Styling ── */
+.logoFallback {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 768px) {
+  .clientCard {
+    width: 200px;
+    height: 100px;
+  }
+  .logoImg {
+    max-height: 35px;
+  }
+  .marqueeContainer::before,
+  .marqueeContainer::after {
+    width: 50px; /* Smaller gradient fade on mobile */
+  }
+}

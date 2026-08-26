@@ -1,0 +1,47 @@
+/* ---------- TRAINING · ABOUT + COURSES ---------- */
+.section { background: #f2f2f2; padding: 90px 30px; font-family: var(--font-geist); color: #141414; }
+.wrap { max-width: 1400px; margin: 0 auto; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 40px; padding: 8px 18px 8px 10px;
+  font-size: 14px; font-weight: 600; color: #141414;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05); width: fit-content;
+}
+.pillDot { width: 12px; height: 12px; border-radius: 3px; background: var(--clr-accent); flex-shrink: 0; }
+
+.intro { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; margin-bottom: 70px; }
+.heading {
+  font-family: var(--font-mona);
+  font-size: var(--fs-heading);
+  font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; color: #141414;
+  margin: 20px 0 0; max-width: 18ch;
+}
+.heading em { font-style: normal; color: var(--clr-accent); }
+.para { font-size: 17px; line-height: 1.6; color: #55524c; margin-top: 20px; }
+.highlights { display: flex; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+.hl { display: flex; flex-direction: column; }
+.hlNum { font-family: var(--font-mona); font-size: clamp(30px, 3vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: var(--clr-accent); line-height: 1; }
+.hlLabel { font-size: 14px; font-weight: 600; color: #55524c; margin-top: 8px; max-width: 18ch; }
+.introImg { border-radius: 14px; overflow: hidden; }
+.introImg img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block; }
+
+/* course cards */
+.courseHead { margin-bottom: 32px; }
+.courseTitle { font-family: var(--font-mona); font-size: clamp(26px, 2.6vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: #141414; margin: 16px 0 0; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.cardImg { width: 100%; height: 170px; object-fit: cover; display: block; }
+.cardBody { padding: 22px 22px 26px; }
+.cardName { font-family: var(--font-mona); font-size: 21px; font-weight: 700; color: #141414; margin-bottom: 10px; }
+.cardDesc { font-size: 15px; line-height: 1.5; color: #55524c; }
+
+@media (max-width: 1024px) {
+  .intro { grid-template-columns: 1fr; gap: 32px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .section { padding: 60px 20px; }
+  .grid { grid-template-columns: 1fr; }
+}
