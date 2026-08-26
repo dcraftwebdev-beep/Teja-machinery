@@ -1,12 +1,12 @@
 import s from './TrainingInfra.module.css';
 
 const gallery = [
-  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=900&auto=format&fit=crop', cls: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=700&auto=format&fit=crop', cls: 'tall' },
-  { src: 'https://images.unsplash.com/photo-1537248384218-4a572a188f8d?q=80&w=700&auto=format&fit=crop', cls: '' },
-  { src: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=700&auto=format&fit=crop', cls: '' },
-  { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop', cls: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=700&auto=format&fit=crop', cls: '' },
+  { src: '/Assests/traing/doublecolumnsvmc.jpg', cls: 'wide' },
+  { src: '/Assests/traing/fanuc.jpg', cls: 'tall' },
+  { src: '/Assests/traing/vmc.jpg', cls: '' },
+  { src: '/Assests/traing/4fanuclatheljpg.jpg', cls: '' },
+  { src: '/Assests/traing/classroom.jpg', cls: 'wide' },
+  { src: '/Assests/traing/fanuc.jpg', cls: '' },
 ];
 
 export default function TrainingInfra() {

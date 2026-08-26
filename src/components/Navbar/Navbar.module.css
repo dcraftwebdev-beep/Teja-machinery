@@ -269,7 +269,7 @@
   .menu { display: none; }
   .header { padding: 16px 22px; }
   .brandText { font-size: 16px; }
-  .brandLogo { height: 32px; }
+  .brandLogo { height: 60px; }
 }
 @media (max-width: 600px) {
   .quote { display: none; }

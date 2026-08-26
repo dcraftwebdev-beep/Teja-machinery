@@ -19,7 +19,7 @@ export default function TrainingHero() {
         </div>
       </div>
       <div className={s.image}>
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1600&auto=format&fit=crop" alt="TTTI training lab" />
+        <img src="/Assests/traing/institute.jpg" alt="TTTI training lab" />
       </div>
     </section>
   );

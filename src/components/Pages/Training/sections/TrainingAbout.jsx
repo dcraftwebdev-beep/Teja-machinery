@@ -19,7 +19,7 @@ const avatars = [
   'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop',
 ];
-const labImg = 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=700&auto=format&fit=crop';
+const labImg = '/Assests/traing/classroom.jpg';
 
 export default function TrainingAbout() {
   return (

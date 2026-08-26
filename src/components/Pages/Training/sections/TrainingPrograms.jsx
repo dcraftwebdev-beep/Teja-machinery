@@ -28,22 +28,22 @@ const IconGear = () => (
 const programs = [
   {
     id: '01', title: 'CNC Programming', icon: <IconCode />,
-    image: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=800&auto=format&fit=crop',
+    image: '/Assests/core-programns/CNC%20Programming.jpg',
     features: ['Live FANUC controls', 'Part program writing & editing', 'Toolpath optimization', 'G-code fundamentals'],
   },
   {
     id: '02', title: 'CNC Interfacing', icon: <IconChip />,
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    image: '/Assests/core-programns/CNC%20Interfacing.jpg',
     features: ['Machine parameters & I/O', 'Control integration', 'Servo & spindle setup', 'Alarm diagnostics'],
   },
   {
     id: '03', title: 'Robot Programming', icon: <IconRobot />,
-    image: 'https://images.unsplash.com/photo-1537248384218-4a572a188f8d?q=80&w=800&auto=format&fit=crop',
+    image: '/Assests/core-programns/Robot%20Programming.jpg',
     features: ['FANUC robot teaching', 'Path & motion planning', 'Gripper & tool setup', 'Robot cell operation'],
   },
   {
     id: '04', title: 'Mechatronics', icon: <IconGear />,
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
+    image: '/Assests/core-programns/Mechatronics.jpg',
     features: ['Mechanical + electronics', 'Sensors & actuators', 'PLC & controls', 'Automation systems'],
   },
 ];
