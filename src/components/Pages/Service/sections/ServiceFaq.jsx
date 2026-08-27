@@ -11,19 +11,19 @@ const Close = () => (
 const faqs = [
   {
     q: 'What manufacturing & engineering services do you provide?',
-    a: 'We offer end-to-end solutions — machine retrofitting and reconditioning, CNC automation and robotics, precision fabrication and special-purpose machines (SPM), plus technical training through our FANUC-partnered institute.',
+    a: 'We offer end-to-end solutions, machine retrofitting and reconditioning, CNC automation and robotics, precision fabrication and special-purpose machines (SPM), plus technical training through our FANUC-partnered institute.',
   },
   {
     q: 'Which machines can you retrofit or recondition?',
-    a: 'VTL, HBM, VMC, HMC, lathes, FBM and grinding machines ranging from 1m to 16m — including projects delivered without original documentation.',
+    a: 'VTL, HBM, VMC, HMC, lathes, FBM and grinding machines ranging from 1m to 16m, including projects delivered without original documentation.',
   },
   {
     q: 'Do you work with SIEMENS and FANUC controls?',
-    a: 'Yes. Our teams commission SIEMENS and FANUC systems across India and abroad — including installations in Singapore, Malaysia and Africa.',
+    a: 'Yes. Our teams commission SIEMENS and FANUC systems across India and abroad, including installations in Singapore, Malaysia and Africa.',
   },
   {
     q: 'Can you manage low and high-volume production?',
-    a: 'Yes — from one-off SPM builds to full manufacturing and fabrication runs for the aerospace, windmill, automobile and engineering industries at our in-house facility.',
+    a: 'Yes, from one-off SPM builds to full manufacturing and fabrication runs for the aerospace, windmill, automobile and engineering industries at our in-house facility.',
   },
   {
     q: 'What industries and clients do you serve?',

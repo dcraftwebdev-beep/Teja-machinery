@@ -23,7 +23,7 @@ const positions = [
   { title: 'CNC Programmer', meta: 'Machining · Chennai · Full-time' },
   { title: 'Automation & Robotics Engineer', meta: 'Automation · Chennai · Full-time' },
   { title: 'Service & Commissioning Engineer', meta: 'Field · Pan-India · Full-time' },
-  { title: 'CNC Trainer — TTTI', meta: 'Training · Chennai · Full-time' },
+  { title: 'CNC Trainer, TTTI', meta: 'Training · Chennai · Full-time' },
   { title: 'Precision Fabrication Technician', meta: 'Manufacturing · Chennai · Full-time' },
   { title: 'Project Engineer', meta: 'Projects · Chennai · Full-time' },
 ];
@@ -46,7 +46,7 @@ export default function Careers() {
           <h1 className={s.heroTitle}>Build the future of <em>precision</em> manufacturing</h1>
           <p className={s.heroDesc}>
             Join a team that retrofits, automates and fabricates the machines behind India&rsquo;s
-            core industries — and trains the next generation of engineers along the way.
+            core industries, and trains the next generation of engineers along the way.
           </p>
           <AnimButton onClick={scrollToOpenings} label="View open roles" variant="orange" />
         </div>
@@ -101,7 +101,7 @@ export default function Careers() {
         <div className={s.band}>
           <div className={s.bandText}>
             <div className={s.bandTitle}>Didn&rsquo;t find your role?</div>
-            <div className={s.bandDesc}>Send us your resume — we&rsquo;re always looking for skilled people.</div>
+            <div className={s.bandDesc}>Send us your resume, we&rsquo;re always looking for skilled people.</div>
           </div>
           <div className={s.bandAction}>
             <AnimButton to="/contact" label="Send your resume" variant="light" />

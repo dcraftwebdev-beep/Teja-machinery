@@ -1,6 +1,6 @@
 import styles from '../About.module.css';
 
-const certs = ['ISO 9001:2015', 'FANUC Authorized Partner', 'ASME Section IX', 'TÜV-Certified Welders', 'Est. 2005 — Chennai'];
+const certs = ['ISO 9001:2015', 'FANUC Authorized Partner', 'ASME Section IX', 'TÜV-Certified Welders', 'Est. 2005, Chennai'];
 
 export default function Certifications() {
   return (

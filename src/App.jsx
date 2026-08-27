@@ -75,18 +75,18 @@ function AppContent() {
     });
 
     if (!aosReady.current) {
-      // first mount — init AFTER tagging so above-the-fold (hero) animates on load
+      // first mount, init AFTER tagging so above-the-fold (hero) animates on load
       AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 40 });
       aosReady.current = true;
     } else {
-      // route change — re-scan once the new page has laid out
+      // route change, re-scan once the new page has laid out
       const id = setTimeout(() => AOS.refreshHard(), 60);
       return () => clearTimeout(id);
     }
     return undefined;
   }, [pathname]);
 
-  // GSAP SplitText — every section heading reveals character-by-character as it
+  // GSAP SplitText, every section heading reveals character-by-character as it
   // scrolls into view. useLayoutEffect runs before paint so there's no flash of
   // the un-split heading.
   useLayoutEffect(() => {

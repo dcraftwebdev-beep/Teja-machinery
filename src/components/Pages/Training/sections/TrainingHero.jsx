@@ -10,7 +10,7 @@ export default function TrainingHero() {
         <span className={s.pill}><span className={s.pillDot} />Skill development</span>
         <h1 className={s.title}>Teja Technical<br />Training <em>Institute</em></h1>
         <p className={s.desc}>
-          Hands-on skill development in CNC, Robotics and Mechatronics — delivered in a
+          Hands-on skill development in CNC, Robotics and Mechatronics, delivered in a
           state-of-the-art lab and jointly certified with FANUC, so students and professionals
           are productive from day one of employment.
         </p>

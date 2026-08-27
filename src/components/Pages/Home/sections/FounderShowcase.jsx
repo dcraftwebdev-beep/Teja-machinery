@@ -39,7 +39,7 @@ export default function FounderShowcase() {
         </div>
 
         <p className={styles.quote}>
-          Great engineering isn&rsquo;t just about precision — it&rsquo;s about vision,
+          Great engineering isn&rsquo;t just about precision, it&rsquo;s about vision,
           commitment, and the relentless pursuit of excellence.
         </p>
       </div>

@@ -1,5 +1,6 @@
 import s from './Contact.module.css';
 import AnimButton from '../Button/AnimButton.jsx';
+import { WHATSAPP_URL } from '../../data/site';
 
 const logos = Array.from({ length: 17 }, (_, i) => `/Assests/Clients/${i + 1}.webp`);
 
@@ -14,11 +15,11 @@ export default function Contact() {
           <div className={s.left}>
             <h1 className={s.title}>Let&rsquo;s <em>work</em><br />together</h1>
             <p className={s.lead}>
-              Got questions or need assistance? Reach out to us anytime — our team is ready to
+              Got questions or need assistance? Reach out to us anytime, our team is ready to
               provide the support and guidance you need.
             </p>
             <div className={s.brochureBtn}>
-              <AnimButton to="/contact" label="Download Brochure" variant="dark" />
+              <AnimButton href={WHATSAPP_URL} label="Download Brochure" variant="dark" />
             </div>
 
             <div className={s.infoRow}>
@@ -35,7 +36,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* right — form */}
+          {/* right, form */}
           <div className={s.formCard}>
             <form className={s.form} onSubmit={(e) => e.preventDefault()}>
               <div className={s.field}>

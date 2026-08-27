@@ -25,7 +25,7 @@ export default function Hero() {
           <span className={styles.since}>// SINCE - 2005 //</span>
           <p className={styles.lead}>
             We deliver end-to-end machining and automation solutions from
-            retrofit and fabrication to robotic integration and assembly —
+            retrofit and fabrication to robotic integration and assembly , 
             engineered for quality, efficiency, and on-time delivery.
           </p>
           <AnimButton to="/services" label="Explore our capabilities" variant="dark" />

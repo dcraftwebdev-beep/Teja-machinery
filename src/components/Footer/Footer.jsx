@@ -36,7 +36,7 @@ export default function Footer() {
               <p className={styles.colText}>
                 Join our newsletter for<br />
                 tips, updates, and project<br />
-                highlights—only the good stuff.
+                highlights, only the good stuff.
               </p>
               <form className={styles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
                 <input 
@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Bottom Bar Section */}
           <div className={styles.bottomBar}>
             <p className={styles.copyright}>
-              &copy; 2026 <span>Teja Machinery Pvt Ltd</span> — All rights reserved
+              &copy; 2026 <span>Teja Machinery Pvt Ltd</span>, All rights reserved
             </p>
             <div className={styles.socials}>
               <a href="#facebook" className={styles.socialLink}>

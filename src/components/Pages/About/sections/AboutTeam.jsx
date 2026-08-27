@@ -6,7 +6,7 @@ const InIcon = () => (<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.
 
 const team = [
   { name: 'S. Muthu', role: 'Founder & Managing Director' },
-  { name: 'Vivek', role: 'Director — CNC & Automation' },
+  { name: 'Vivek', role: 'Director, CNC & Automation' },
   { name: 'Retrofit & Reconditioning', role: 'Machine Tool Division' },
   { name: 'Robotics & Automation', role: 'Industrial Systems' },
   { name: 'Teja Technical Training Institute', role: 'FANUC-Partnered Programs' },

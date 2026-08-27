@@ -140,7 +140,7 @@
 .marqueeTrack {
   display: flex;
   width: max-content;
-  animation: slide 38s linear infinite;
+  animation: slide 58s linear infinite;
 }
 .marquee:hover .marqueeTrack { animation-play-state: paused; }
 @keyframes slide {

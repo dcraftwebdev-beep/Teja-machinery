@@ -79,7 +79,7 @@ export default function TrainingPrograms() {
                   ))}
                 </ul>
               </div>
-              <Link to="/contact" className={styles.rowArrow} aria-label={`${p.title} — enquire`}>
+              <Link to="/contact" className={styles.rowArrow} aria-label={`${p.title}, enquire`}>
                 <Arrow />
               </Link>
             </article>

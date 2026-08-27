@@ -10,12 +10,12 @@ export default function Story() {
         </h2>
         <p className={styles.para}>
           What began as a small retrofitting workshop in Chennai has grown into a complete
-          industrial engineering partner. We have brought 60+ machine brands back to life —
+          industrial engineering partner. We have brought 60+ machine brands back to life , 
           including projects delivered without original documentation.
         </p>
         <p className={styles.para}>
           From first assessment to on-site commissioning, our mechanical, controls and
-          automation teams work as one — so every machine leaves precise, reliable and ready
+          automation teams work as one, so every machine leaves precise, reliable and ready
           for the next decade of production.
         </p>
       </div>

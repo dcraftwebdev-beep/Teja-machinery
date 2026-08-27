@@ -99,7 +99,7 @@ export default function CoreServices() {
                   ))}
                 </ul>
               </div>
-              <Link to="/services" className={styles.rowArrow} aria-label={`${s.title} — learn more`}>
+              <Link to="/services" className={styles.rowArrow} aria-label={`${s.title}, learn more`}>
                 <Arrow />
               </Link>
             </article>

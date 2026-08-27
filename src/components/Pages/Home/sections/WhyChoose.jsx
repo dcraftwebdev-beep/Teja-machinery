@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from '../Home.module.css';
 
 const chooseItems = [
-  { n: '01', t: 'Proven Track Record', d: '60+ machine brands retrofitted — including projects with no original documentation.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=900&auto=format&fit=crop' },
+  { n: '01', t: 'Proven Track Record', d: '60+ machine brands retrofitted, including projects with no original documentation.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=900&auto=format&fit=crop' },
   { n: '02', t: 'Complete Solution Provider', d: 'From first assessment to on-site or factory-based support and custom solutions.', img: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=900&auto=format&fit=crop' },
   { n: '03', t: 'Advanced Technology', d: 'FANUC & Siemens CNC systems paired with full automation and robotics.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop' },
   { n: '04', t: 'Precision Machined Components', d: 'Al, SS & special-alloy fabrication for aerospace, railways and pressure vessels.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=900&auto=format&fit=crop' },
@@ -37,7 +37,7 @@ export default function WhyChoose() {
         className={`${styles.wcGrid} ${styles.reveal}`}
         onMouseLeave={() => setPaused(false)}
       >
-        {/* Left — single image that changes with the active point */}
+        {/* Left, single image that changes with the active point */}
         <div className={styles.wcImageWrap}>
           {chooseItems.map((it, i) => (
             <img
@@ -59,7 +59,7 @@ export default function WhyChoose() {
           </div>
         </div>
 
-        {/* Right — points with arrows */}
+        {/* Right, points with arrows */}
         <div className={styles.wcList}>
           {chooseItems.map((it, i) => (
             <button

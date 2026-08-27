@@ -44,7 +44,7 @@ export default function AboutHero() {
           <p className={s.heroCardText}>
             Founded in 2006 by S. Muthu, Teja Machinery grew from machine
             retrofitting into a one-stop partner for CNC automation, robotics,
-            precision fabrication and technical training — trusted by ISRO,
+            precision fabrication and technical training, trusted by ISRO,
             BRAHMOS Aerospace and industry leaders across India and abroad.
           </p>
           <div className={s.heroCardActions}>

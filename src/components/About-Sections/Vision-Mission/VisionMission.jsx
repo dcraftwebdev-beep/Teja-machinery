@@ -4,7 +4,7 @@ import styles from './VisionMission.module.css';
 /* ── Data ──────────────────────────────────────── */
 const missionData = {
   mission: 'To deliver precision-engineered retrofitting and manufacturing solutions that maximise machine uptime, reduce total cost of ownership, and empower India\'s industrial sector to compete on a global stage.',
-  vision: 'To be India\'s most trusted integrated manufacturing solutions partner — recognised for technical excellence, on-time delivery, and the courage to take on complex challenges no one else will.',
+  vision: 'To be India\'s most trusted integrated manufacturing solutions partner, recognised for technical excellence, on-time delivery, and the courage to take on complex challenges no one else will.',
 };
 
 /* ── Hook: staggered reveal on scroll ──────────── */

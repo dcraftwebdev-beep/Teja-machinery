@@ -16,7 +16,7 @@ const Arrow = () => (
  * Props:
  *  - to:      route path
  *  - label:   button text
- *  - variant: 'dark' (black) | 'orange' — the only two button colors
+ *  - variant: 'dark' (black) | 'orange', the only two button colors
  */
 export default function AnimButton({ to, href, label, variant = 'dark', className = '', onClick }) {
   const inner = (

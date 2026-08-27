@@ -21,7 +21,7 @@ const primaryItems = navItems.filter((n) => PRIMARY.includes(n.to));
 // The "balance" links live only in the sidebar (not duplicated from the top bar)
 const secondaryItems = navItems.filter((n) => !PRIMARY.includes(n.to));
 
-// Pages whose hero is light — the nav needs dark text there
+// Pages whose hero is light, the nav needs dark text there
 const LIGHT_NAV_ROUTES = ['/', '/about', '/services', '/training', '/gallery', '/careers', '/contact'];
 
 export default function Navbar() {

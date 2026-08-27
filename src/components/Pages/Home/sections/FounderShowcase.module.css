@@ -4,7 +4,7 @@
 .section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@
 .card img {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 215px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -93,7 +93,7 @@
 
 .quote {
   max-width: 360px;
-padding-top: 40px;
+padding-top: 20px !important;
   font-family: var(--font-mona);
   font-size: clamp(15px, 1vw, 18px);
   font-weight: 700;

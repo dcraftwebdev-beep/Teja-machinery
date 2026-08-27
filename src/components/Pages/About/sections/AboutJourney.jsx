@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import s from './AboutJourney.module.css';
 import AnimButton from '../../../Button/AnimButton.jsx';
 
@@ -8,10 +9,10 @@ const ArrowR = () => (
 );
 
 const capabilities = [
-  'Retrofitting & Reconditioning',
-  'CNC Automation & Robotics',
-  'Precision Fabrication & SPM',
-  'Technical Training — TTTI',
+  { label: 'Retrofitting & Reconditioning', to: '/services/cnc-retrofitting' },
+  { label: 'CNC Automation & Robotics', to: '/services/industrial-automation' },
+  { label: 'Precision Fabrication & SPM', to: '/services/fabrication-and-machining' },
+  { label: 'Technical Training, TTTI', to: '/training' },
 ];
 
 export default function AboutJourney() {
@@ -41,12 +42,12 @@ export default function AboutJourney() {
             <p className={s.storyPara}>
               Established in 2006, Teja Machinery began by retrofitting conventional
               and NC machines with upgraded CNC controls, PLC automation and tool
-              refurbishment — delivering VTL, HBM, VMC and grinding projects from 1m
+              refurbishment, delivering VTL, HBM, VMC and grinding projects from 1m
               to 16m, on time and cost-effectively, across India.
             </p>
             <p className={s.storyPara}>
               Commissioning SIEMENS and FANUC systems, our teams have proven their
-              caliber in North India and abroad — Singapore, Malaysia and Africa.
+              caliber in North India and abroad, Singapore, Malaysia and Africa.
               Today, with CNC automation, robotics, a FANUC-partnered training
               institute and a precision manufacturing facility, Teja is an
               ISO-accredited, one-stop engineering partner.
@@ -57,7 +58,7 @@ export default function AboutJourney() {
             <h4 className={s.colTitle}>Our capabilities</h4>
             <div className={s.capList}>
               {capabilities.map((c) => (
-                <div key={c} className={s.capItem}>{c}<ArrowR /></div>
+                <Link key={c.label} to={c.to} className={s.capItem}>{c.label}<ArrowR /></Link>
               ))}
             </div>
             <div className={s.capBtn}>

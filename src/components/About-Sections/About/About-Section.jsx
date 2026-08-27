@@ -9,7 +9,7 @@ const stats = [
   { num: '₹50M', label: 'Facility Investment' },
 ]
 const milestones = [
-  { year: '2006', text: 'Founded by Mr. S. Muthu — began CNC retrofitting.' },
+  { year: '2006', text: 'Founded by Mr. S. Muthu, began CNC retrofitting.' },
   { year: '2010', text: 'Expanded to VTL, HBM, VMC, HMC & Grinding Machines.' },
   { year: '2014', text: 'International presence: Singapore, Malaysia & Africa.' },
   { year: '2018', text: 'Commissioned major SIEMENS & FANUC systems nationwide.' },
@@ -48,11 +48,11 @@ export default function About() {
     <main className={styles.page}>
 
       {/* ══════════════════════════════════
-          §1  ABOUT — editorial split layout
+          §1  ABOUT, editorial split layout
           ══════════════════════════════════ */}
       <section id="about" className={styles.heroSection} ref={heroRef}>
 
-        {/* LEFT — large sticky panel */}
+        {/* LEFT, large sticky panel */}
         <div className={styles.heroLeft}>
           <div className={styles.heroImg}>
             <div className={styles.heroImgOverlay} />
@@ -74,7 +74,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT — article cards feed */}
+        {/* RIGHT, article cards feed */}
         <div className={styles.heroRight}>
           <div className={styles.heroRightInner}>
 
@@ -87,7 +87,7 @@ export default function About() {
               CNC retrofitting firm into India's comprehensive manufacturing solutions provider.
               With nearly two decades of expertise, we've successfully retrofitted machines
               ranging from 1 m to 16 m across VTL, HBM, VMC, HMC, Lathes, FBM, and Grinding
-              Machines throughout India — and internationally in Singapore, Malaysia, and Africa.
+              Machines throughout India, and internationally in Singapore, Malaysia, and Africa.
             </p>
             <p className={styles.heroRightBody}>
               Our expansion includes commissioning major SIEMENS and FANUC systems, designing
@@ -97,7 +97,7 @@ export default function About() {
               we proudly partner with ISRO, BrahMos Aerospace, and leading industrial corporations.
             </p>
 
-            {/* Milestone feed — mirrors article-card layout */}
+            {/* Milestone feed, mirrors article-card layout */}
             {/* <div className={styles.mileFeed} ref={mileRef}>
               {milestones.map((m) => (
                 <div key={m.year} className={styles.mileCard}>

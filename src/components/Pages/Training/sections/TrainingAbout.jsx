@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import styles from '../../Home/sections/WhoWeAre.module.css'; // reuse the Home "Who we are" design
 import AnimButton from '../../../Button/AnimButton.jsx';
+import { WHATSAPP_URL } from '../../../../data/site';
 
 const Download = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,14 +46,14 @@ export default function TrainingAbout() {
             <p className={styles.desc}>
               TTTI offers technical skill development in CNC, Robotics and Mechatronics. With a
               state-of-the-art laboratory, we give hands-on practical training so students and
-              employees are productive from day one of employment — jointly certified with FANUC
+              employees are productive from day one of employment, jointly certified with FANUC
               and recognized across the machining and machine-tool industries.
             </p>
             <div className={styles.actions}>
               <AnimButton to="/contact" label="Enquire now" variant="dark" />
-              <Link to="/contact" className={styles.brochure}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className={styles.brochure}>
                 Download brochure <Download />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

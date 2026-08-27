@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import s from './Gallery.module.css';
 import grid from '../Pages/Service/sections/ServiceGrid.module.css'; // reuse the Services card design
 import CtaBanner from '../Pages/Home/sections/CtaBanner.jsx';
+import { WHATSAPP_URL } from '../../data/site';
 
 const ArrowUpRight = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -13,7 +13,7 @@ const products = [
   {
     title: 'Robotic System',
     img: '/Assests/products/robotic-system.jpg',
-    short: 'Roboguide software to design, prove and program robot systems in real time — cutting design and test time.',
+    short: 'Roboguide software to design, prove and program robot systems in real time, cutting design and test time.',
   },
   {
     title: 'Simulation Software',
@@ -23,12 +23,12 @@ const products = [
   {
     title: 'Direct Lubrication System',
     img: '/Assests/products/direct-lubrication-system.jpg',
-    short: 'DLS lubrication for pinions, racks and open gears — greases, flexxpump units and tube connectors.',
+    short: 'DLS lubrication for pinions, racks and open gears, greases, flexxpump units and tube connectors.',
   },
   {
     title: 'CNC Retrofitting',
     img: '/Assests/products/cnc-retrofitting.jpg',
-    short: 'Upgrade CNC controls, drives and motors — turning old machines into high-productivity CNC machines.',
+    short: 'Upgrade CNC controls, drives and motors, turning old machines into high-productivity CNC machines.',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Gallery() {
           <h1 className={s.heroTitle}>Products &amp; <em>solutions</em></h1>
           <p className={s.heroDesc}>
             Software, systems and retrofits that keep your machines precise, productive and
-            future-ready — engineered and supported end to end by Teja.
+            future-ready, engineered and supported end to end by Teja.
           </p>
         </div>
       </section>
@@ -49,12 +49,19 @@ export default function Gallery() {
       <section className={grid.section}>
         <div className={grid.grid}>
           {products.map((p) => (
-            <Link key={p.title} to="/contact" className={grid.card}>
+            <a
+              key={p.title}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className={grid.card}
+              aria-label={`Enquire about ${p.title}`}
+            >
               <span className={grid.hoverArrow}><ArrowUpRight /></span>
               <img className={grid.thumb} src={p.img} alt={p.title} loading="lazy" />
               <h2 className={grid.title}>{p.title}</h2>
               <p className={grid.desc}>{p.short}</p>
-            </Link>
+            </a>
           ))}
         </div>
       </section>

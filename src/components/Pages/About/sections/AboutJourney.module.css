@@ -137,16 +137,17 @@
 }
 
 .capItem {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 16px;
   padding: 16px 0;
   border-bottom: 1px solid rgba(0,0,0,0.06);
-  font-size: 18px; 
-  font-weight: 500; 
+  font-size: 18px;
+  font-weight: 500;
   color: #444;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
 /* Remove border from last item if needed */
@@ -154,8 +155,9 @@
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.capItem:hover { 
-  color: #111; 
+.capItem:hover {
+  color: var(--clr-accent);
+  padding-left: 8px;
 }
 
 .capItem svg { 

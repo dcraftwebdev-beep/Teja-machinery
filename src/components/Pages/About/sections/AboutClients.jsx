@@ -24,7 +24,7 @@ export default function AboutClients() {
       </div>
 
       <div className={s.certRow}>
-        <div className={s.certLead}><b>Since 2006</b> — accredited, IBR-approved &amp; ISO-certified excellence</div>
+        <div className={s.certLead}><b>Since 2006</b>, accredited, IBR-approved &amp; ISO-certified excellence</div>
         <div className={s.badges}>
           {certs.map((c) => (
             <div key={c} className={s.badge}><Award /><span className={s.badgeText}>{c}</span></div>

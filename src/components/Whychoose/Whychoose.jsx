@@ -5,7 +5,7 @@ const pillars = [
     id: '01',
     tag: 'Track Record',
     title: 'Proven Track Record',
-    desc: '60+ machine brands successfully retrofitted — including projects completed without original documentation.',
+    desc: '60+ machine brands successfully retrofitted, including projects completed without original documentation.',
     features: [
       '60+ machine brands retrofitted',
       'Projects without original docs',
@@ -18,7 +18,7 @@ const pillars = [
     id: '02',
     tag: 'Full Service',
     title: 'Complete Solution Provider',
-    desc: 'From initial assessment to ongoing support — on-site or factory-based, with custom solutions for unique requirements.',
+    desc: 'From initial assessment to ongoing support, on-site or factory-based, with custom solutions for unique requirements.',
     features: [
       'Assessment to ongoing support',
       'On-site & factory-based service',
@@ -52,7 +52,7 @@ const credentials = [
     ),
   },
   {
-    label: 'Est. 2005 — 20+ Years',
+    label: 'Est. 2005, 20+ Years',
     icon: (
       <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
@@ -98,7 +98,7 @@ export default function WhyChoose() {
           <div className={styles.topRight}>
             <p className={styles.topDesc}>
               For over two decades, Teja Machinery has set the benchmark for industrial
-              retrofitting and automation — trusted by manufacturers across India's most
+              retrofitting and automation, trusted by manufacturers across India's most
               demanding sectors.
             </p>
             {/* <div className={styles.statRow}>

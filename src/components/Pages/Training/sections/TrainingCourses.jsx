@@ -17,7 +17,7 @@ export default function TrainingCourses() {
             <h2 className={s.heading}>Practical skills that make you <em>industry-ready</em></h2>
             <p className={s.para}>
               TTTI offers technical skill development in CNC, Robotics and Mechatronics. Our
-              teaching methodology puts practical learning first — every course is designed to
+              teaching methodology puts practical learning first, every course is designed to
               impart the exact skills the industry needs, so graduates are immediately employable.
             </p>
             <div className={s.highlights}>

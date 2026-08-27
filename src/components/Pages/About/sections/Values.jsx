@@ -11,7 +11,7 @@ const cards = [
   {
     theme: 'Light',
     title: <>CNC Retrofit &amp;<br />reconditioning</>,
-    copy: 'We bring ageing machines back to life — control upgrades, drives and full reconditioning.',
+    copy: 'We bring ageing machines back to life, control upgrades, drives and full reconditioning.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="8" y="16" width="32" height="22" rx="3" />

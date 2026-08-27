@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import styles from './WhoWeAre.module.css';
 import AnimButton from '../../../Button/AnimButton.jsx';
+import { WHATSAPP_URL } from '../../../../data/site';
 
 const Download = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -55,14 +55,14 @@ export default function WhoWeAre() {
             </p>
             <div className={styles.actions}>
               <AnimButton to="/about" label="Learn more about us" variant="dark" />
-              <Link to="/contact" className={styles.brochure}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className={styles.brochure}>
                 Download brochure <Download />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Stat cards — only the three cards animate (inner text does not) */}
+        {/* Stat cards, only the three cards animate (inner text does not) */}
         <div className={styles.cards} data-aos-manual>
           <div className={`${styles.card} ${styles.cWhite}`} data-aos="fade" data-aos-delay="0">
             <div className={styles.cBrand}>TEJA MACHINERY<sup>®</sup></div>

@@ -5,7 +5,7 @@ import styles from '../About.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MANIFESTO = ['We', 'retrofit,', 'automate', 'and', 'fabricate', '—', 'machines', 'built', 'to', 'outlast', 'the', 'decade.'];
+const MANIFESTO = ['We', 'retrofit,', 'automate', 'and', 'fabricate', ', ', 'machines', 'built', 'to', 'outlast', 'the', 'decade.'];
 
 export default function Manifesto() {
   const root = useRef(null);

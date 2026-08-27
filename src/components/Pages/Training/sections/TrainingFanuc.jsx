@@ -1,7 +1,7 @@
 import s from './TrainingFanuc.module.css';
 
 const stats = [
-  { num: '1972', label: 'FANUC founded — inventor of NC technology' },
+  { num: '1972', label: 'FANUC founded, inventor of NC technology' },
   { num: '#2', label: 'Largest company in Japan' },
   { num: '75%+', label: 'Global CNC & robotics market share' },
   { num: '350,000+', label: 'Industrial robots installed worldwide' },
@@ -22,8 +22,8 @@ export default function TrainingFanuc() {
             </p>
             <p className={s.para}>
               Building on that CNC and servo foundation, FANUC is the world&rsquo;s largest maker of
-              industrial robots — used for material handling, welding, foundry, assembly, cutting
-              and painting — and the current market leader in India.
+              industrial robots, used for material handling, welding, foundry, assembly, cutting
+              and painting, and the current market leader in India.
             </p>
           </div>
           <div className={s.stats}>

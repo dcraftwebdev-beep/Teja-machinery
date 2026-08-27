@@ -60,13 +60,13 @@ export default function WhatWeManufacture() {
         <div className={styles.diagram}>
           <img className={styles.explodedImg} src="/Assests/manufacture/exploded.svg" alt="Exploded view of a precision assembly" />
           <svg className={styles.callouts} viewBox="0 0 1106 486" preserveAspectRatio="xMidYMid meet" fill="none">
-            {/* Aluminum Gear Housing — top center */}
+            {/* Aluminum Gear Housing, top center */}
             <line x1="430" y1="205" x2="430" y2="110" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
             {RING(430, 205)}
-            {/* Plastic Enclosures — bottom left */}
+            {/* Plastic Enclosures, bottom left */}
             <line x1="105" y1="300" x2="105" y2="400" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
             {RING(105, 300)}
-            {/* Electrical Panels — bottom right */}
+            {/* Electrical Panels, bottom right */}
             <line x1="815" y1="300" x2="815" y2="400" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
             {RING(815, 300)}
           </svg>
@@ -96,7 +96,7 @@ export default function WhatWeManufacture() {
           <h2 className={styles.bottomHeading}>Explore our complete product range across industries.</h2>
           <div className={styles.bottomActions}>
             <a href="/contact" className={styles.download}>Download brochure <Download /></a>
-            <AnimButton to="/services" label="View all products" variant="dark" className={styles.viewBtn} />
+            <AnimButton to="/gallery" label="View all products" variant="dark" className={styles.viewBtn} />
           </div>
         </div>
       </div>

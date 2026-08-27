@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './TrustTestimonials.module.css';
 import AnimButton from '../../../Button/AnimButton.jsx';
+import { WHATSAPP_URL } from '../../../../data/site';
 
 const Star = () => (
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.783 1.401 8.169L12 18.896l-7.335 3.866 1.401-8.169L.132 9.21l8.2-1.192z" /></svg>
@@ -18,10 +19,10 @@ const ArrowR = () => (
 
 const testimonials = [
   { text: 'The team’s dedication and innovative approach transformed our ideas into reality. Every stage of the project was handled with care and expertise.', name: 'Emily Carter', role: 'Product Designer', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop' },
-  { text: 'Teja Machinery retrofitted our ageing VMC line and it now runs like new — booked, delivered and commissioned without any fuss.', name: 'Rajesh M.', role: 'Plant Head, Auto Components', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop' },
+  { text: 'Teja Machinery retrofitted our ageing VMC line and it now runs like new, booked, delivered and commissioned without any fuss.', name: 'Rajesh M.', role: 'Plant Head, Auto Components', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop' },
   { text: 'We needed a complex automation cell integrated fast. The FANUC robotic solution was exactly what our production floor needed.', name: 'Bhaskar K.', role: 'Manufacturing Manager', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop' },
   { text: 'From assessment to on-site support, the team was precise and reliable. Their precision machining quality is outstanding.', name: 'Lakshmi A.', role: 'Procurement Lead, Railways', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop' },
-  { text: 'A true engineering partner — they re-engineered a machine with no documentation and delivered ahead of schedule.', name: 'Daniel O.', role: 'Operations Director', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop' },
+  { text: 'A true engineering partner, they re-engineered a machine with no documentation and delivered ahead of schedule.', name: 'Daniel O.', role: 'Operations Director', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop' },
 ];
 
 const midImg = 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop';
@@ -91,7 +92,7 @@ export default function TrustTestimonials() {
             <h3 className={styles.helpTitle}>Need help choosing the right product?</h3>
             <p className={styles.helpDesc}>Always ready with guidance, product details, and after-sales support.</p>
             <div className={styles.helpAction}>
-              <AnimButton to="/contact" label="Contact Support" variant="light" />
+              <AnimButton href={WHATSAPP_URL} label="Contact Support" variant="light" />
             </div>
           </div>
         </div>

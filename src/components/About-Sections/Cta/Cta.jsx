@@ -45,7 +45,7 @@ export default function About() {
                 Breakthrough.
               </h2>
               <p className={styles.ctaBody}>
-                From CNC retrofitting to full-scale manufacturing — our 40+ strong team delivers
+                From CNC retrofitting to full-scale manufacturing, our 40+ strong team delivers
                 on time, every time. Trusted by ISRO, BrahMos Aerospace, and India's leading industries.
               </p>
               <div className={styles.ctaActions}>

@@ -7,10 +7,10 @@ import ServiceFaq from './sections/ServiceFaq.jsx';
 import ServiceContact from './sections/ServiceContact.jsx';
 
 const workflow = [
-  { t: 'Assessment', d: 'On-site study of the machine, requirement and scope — with a clear, costed proposal.' },
+  { t: 'Assessment', d: 'On-site study of the machine, requirement and scope, with a clear, costed proposal.' },
   { t: 'Engineering', d: 'Mechanical, controls and automation design tailored to your production goals.' },
   { t: 'Execution', d: 'Precision build, retrofit or fabrication by our skilled in-house team.' },
-  { t: 'Commissioning', d: 'On-site installation, testing and hand-over — with ongoing support.' },
+  { t: 'Commissioning', d: 'On-site installation, testing and hand-over, with ongoing support.' },
 ];
 
 export default function ServiceDetail() {
