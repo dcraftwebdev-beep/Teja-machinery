@@ -64,7 +64,7 @@ export default function Contact() {
                 <textarea id="msg" className={s.textarea} placeholder="Tell us about your project" />
               </div>
               <div className={s.submitWrap}>
-                <button type="submit" className={s.submit}>Submit details</button>
+                <AnimButton submit label="Submit details" variant="light" />
               </div>
             </form>
           </div>

@@ -18,7 +18,7 @@ const Arrow = () => (
  *  - label:   button text
  *  - variant: 'dark' (black) | 'orange', the only two button colors
  */
-export default function AnimButton({ to, href, label, variant = 'dark', className = '', onClick }) {
+export default function AnimButton({ to, href, label, variant = 'dark', className = '', onClick, submit = false }) {
   const inner = (
     <>
       <span className={styles.label}>
@@ -35,9 +35,9 @@ export default function AnimButton({ to, href, label, variant = 'dark', classNam
   );
   const cls = `${styles.btn} ${styles[variant]} ${className}`;
 
-  // action button (e.g. scroll to a section)
-  if (onClick) {
-    return <button type="button" onClick={onClick} className={cls}>{inner}</button>;
+  // action / form-submit button
+  if (onClick || submit) {
+    return <button type={submit ? 'submit' : 'button'} onClick={onClick} className={cls}>{inner}</button>;
   }
   // external link (e.g. WhatsApp / tel)
   if (href) {
